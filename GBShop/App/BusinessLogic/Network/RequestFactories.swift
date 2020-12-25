@@ -22,3 +22,7 @@ protocol RegisterRequestFactory {
 protocol ChangeDataRequestFactory {
     func changeData(userName: String, password: String, email : String, gender: String, cardNumber: String, comment: String, completionHandler: @escaping (AFDataResponse<RegisterResult>) -> Void)
 }
+
+protocol ProductsRequestFactory {
+    func catalogData(categoryId: Int, pageNumber: Int, completionHandler: @escaping (AFDataResponse<ProductsResult>) -> Void)
+}
