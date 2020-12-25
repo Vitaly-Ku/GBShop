@@ -6,16 +6,9 @@ target 'GBShop' do
   use_frameworks!
 
   # Pods for GBShop
-
 pod 'Alamofire'
-
-  target 'GBShopTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'GBShopUITests' do
-    # Pods for testing
-  end
-
+target 'GBShopTests' do
+        inherit! :complete
+        pod 'Alamofire'
+    end
 end
