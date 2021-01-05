@@ -24,6 +24,10 @@
 		5D765A0B2590724E00D3AE02 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D765A0A2590724E00D3AE02 /* Register.swift */; };
 		5D765A102590727700D3AE02 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D765A0F2590727700D3AE02 /* Logout.swift */; };
 		5D765A152590729300D3AE02 /* ChangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D765A142590729300D3AE02 /* ChangeData.swift */; };
+		5D93CCD725A46160000C893C /* StandardResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93CCD625A46160000C893C /* StandardResult.swift */; };
+		5D93CCDC25A4623B000C893C /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93CCDB25A4623B000C893C /* UserReviews.swift */; };
+		5D93CCE125A46275000C893C /* ManageReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93CCE025A46275000C893C /* ManageReviews.swift */; };
+		5D93CCE625A462AD000C893C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93CCE525A462AD000C893C /* Review.swift */; };
 		5DA8F7B5258B39E70014C00D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8F7B4258B39E70014C00D /* AppDelegate.swift */; };
 		5DA8F7B7258B39E70014C00D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8F7B6258B39E70014C00D /* SceneDelegate.swift */; };
 		5DA8F7BC258B39E70014C00D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8F7BA258B39E70014C00D /* Main.storyboard */; };
@@ -75,6 +79,10 @@
 		5D765A0A2590724E00D3AE02 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		5D765A0F2590727700D3AE02 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		5D765A142590729300D3AE02 /* ChangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeData.swift; sourceTree = "<group>"; };
+		5D93CCD625A46160000C893C /* StandardResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardResult.swift; sourceTree = "<group>"; };
+		5D93CCDB25A4623B000C893C /* UserReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
+		5D93CCE025A46275000C893C /* ManageReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageReviews.swift; sourceTree = "<group>"; };
+		5D93CCE525A462AD000C893C /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		5DA8F7B1258B39E70014C00D /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA8F7B4258B39E70014C00D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA8F7B6258B39E70014C00D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,8 @@
 				5D765A0F2590727700D3AE02 /* Logout.swift */,
 				5D765A142590729300D3AE02 /* ChangeData.swift */,
 				5D447BC5259619B3001AC1FA /* Products.swift */,
+				5D93CCDB25A4623B000C893C /* UserReviews.swift */,
+				5D93CCE025A46275000C893C /* ManageReviews.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -223,9 +233,11 @@
 		5DA8F7EE258B40860014C00D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5D93CCD625A46160000C893C /* StandardResult.swift */,
 				5D7659D025906E5600D3AE02 /* LoginResult.swift */,
 				5D7659D525906E9400D3AE02 /* User.swift */,
 				5D447BCA25961ABC001AC1FA /* Product.swift */,
+				5D93CCE525A462AD000C893C /* Review.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -508,7 +520,10 @@
 			files = (
 				5D765A06259071C700D3AE02 /* RequestFactory.swift in Sources */,
 				5D7659B825906C4400D3AE02 /* AbstractErrorParser.swift in Sources */,
+				5D93CCE625A462AD000C893C /* Review.swift in Sources */,
+				5D93CCDC25A4623B000C893C /* UserReviews.swift in Sources */,
 				5DA8F7B5258B39E70014C00D /* AppDelegate.swift in Sources */,
+				5D93CCE125A46275000C893C /* ManageReviews.swift in Sources */,
 				5D7659CC25906DBB00D3AE02 /* RequestRouter.swift in Sources */,
 				5D765A0B2590724E00D3AE02 /* Register.swift in Sources */,
 				5D447BCB25961ABC001AC1FA /* Product.swift in Sources */,
@@ -517,6 +532,7 @@
 				5D765A152590729300D3AE02 /* ChangeData.swift in Sources */,
 				5D7659D125906E5600D3AE02 /* LoginResult.swift in Sources */,
 				5D765A012590718900D3AE02 /* Auth.swift in Sources */,
+				5D93CCD725A46160000C893C /* StandardResult.swift in Sources */,
 				5D7659D625906E9400D3AE02 /* User.swift in Sources */,
 				5D7659C725906D7500D3AE02 /* DataRequest.swift in Sources */,
 				5D7659C225906D0800D3AE02 /* CustomDecodableSerializer.swift in Sources */,
