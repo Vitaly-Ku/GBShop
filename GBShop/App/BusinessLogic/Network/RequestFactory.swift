@@ -28,23 +28,13 @@ class RequestFactory {
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeRegisterRequestFatory() -> RegisterRequestFactory {
+    func makeUserReviewsRequestFatory() -> UserReviewsRequestFactory {
         let errorParser = makeErrorParser()
-        return Register(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return UserReviews(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeLogoutRequestFatory() -> LogoutRequestFactory {
+    func makeManageReviewsRequestFatory() -> ManageReviewsRequestFactory {
         let errorParser = makeErrorParser()
-        return Logout(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
-    }
-    
-    func makeChangeDataRequestFatory() -> ChangeDataRequestFactory {
-        let errorParser = makeErrorParser()
-        return ChangeData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
-    }
-    
-    func makeProductsRequestFactory() -> ProductsRequestFactory {
-        let errorParser = makeErrorParser()
-        return Products(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return ManageReviews(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }

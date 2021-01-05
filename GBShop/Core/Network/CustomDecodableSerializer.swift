@@ -24,6 +24,7 @@ class CustomDecodableSerializer<T: Decodable>: DataResponseSerializerProtocol {
             return value
         } catch {
             let customError = errorParser.parse(error)
+            print(String(decoding: data!, as: UTF8.self))
             throw customError
         }
     }
