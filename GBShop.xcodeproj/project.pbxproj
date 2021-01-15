@@ -11,6 +11,7 @@
 		5D447BB225961113001AC1FA /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BB125961113001AC1FA /* ResponseCodableTests.swift */; };
 		5D447BC6259619B3001AC1FA /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BC5259619B3001AC1FA /* Products.swift */; };
 		5D447BCB25961ABC001AC1FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BCA25961ABC001AC1FA /* Product.swift */; };
+		5D49A2CC25B1C3B400C415B0 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D49A2CB25B1C3B400C415B0 /* Basket.swift */; };
 		5D7659B825906C4400D3AE02 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7659B725906C4400D3AE02 /* AbstractErrorParser.swift */; };
 		5D7659BD25906CB500D3AE02 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7659BC25906CB500D3AE02 /* ErrorParser.swift */; };
 		5D7659C225906D0800D3AE02 /* CustomDecodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7659C125906D0800D3AE02 /* CustomDecodableSerializer.swift */; };
@@ -66,6 +67,7 @@
 		5D447BB125961113001AC1FA /* ResponseCodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		5D447BC5259619B3001AC1FA /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		5D447BCA25961ABC001AC1FA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5D49A2CB25B1C3B400C415B0 /* Basket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		5D7659B725906C4400D3AE02 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		5D7659BC25906CB500D3AE02 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		5D7659C125906D0800D3AE02 /* CustomDecodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodableSerializer.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				5D447BC5259619B3001AC1FA /* Products.swift */,
 				5D93CCDB25A4623B000C893C /* UserReviews.swift */,
 				5D93CCE025A46275000C893C /* ManageReviews.swift */,
+				5D49A2CB25B1C3B400C415B0 /* Basket.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				5D93CCD725A46160000C893C /* StandardResult.swift in Sources */,
 				5D7659D625906E9400D3AE02 /* User.swift in Sources */,
 				5D7659C725906D7500D3AE02 /* DataRequest.swift in Sources */,
+				5D49A2CC25B1C3B400C415B0 /* Basket.swift in Sources */,
 				5D7659C225906D0800D3AE02 /* CustomDecodableSerializer.swift in Sources */,
 				5D447BC6259619B3001AC1FA /* Products.swift in Sources */,
 				5D7659BD25906CB500D3AE02 /* ErrorParser.swift in Sources */,

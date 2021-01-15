@@ -85,6 +85,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        
+        let basket = requestFactory.makeBasketRequestFatory()
+        basket.addToBasket(productId: Int.random(in: 1..<100), quantity: Int.random(in: 1..<100)) { response in
+            print("Результат добавления в корзину:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        basket.deleteFromBasket(productId: Int.random(in: 1..<100)) { response in
+            print("Результат удаления из корзины:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        basket.payBasket(userId: Int.random(in: 1..<100)) { response in
+            print("Результат покупки корзины:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         return true
     }
 
