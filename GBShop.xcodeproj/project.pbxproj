@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2330CD8179554A92EDFE27F2 /* Pods_GBShop_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03225A5C79FEE24A7A5EDFDD /* Pods_GBShop_GBShopTests.framework */; };
+		5D3949E325B719DB009DA2D7 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3949DD25B719DB009DA2D7 /* ProductsListViewController.swift */; };
+		5D3949E425B719DB009DA2D7 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3949DE25B719DB009DA2D7 /* ProductsTableViewCell.swift */; };
+		5D3949E625B719DB009DA2D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3949E025B719DB009DA2D7 /* LoginViewController.swift */; };
+		5D3949E725B719DB009DA2D7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3949E125B719DB009DA2D7 /* ProfileViewController.swift */; };
 		5D447BB225961113001AC1FA /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BB125961113001AC1FA /* ResponseCodableTests.swift */; };
 		5D447BC6259619B3001AC1FA /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BC5259619B3001AC1FA /* Products.swift */; };
 		5D447BCB25961ABC001AC1FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D447BCA25961ABC001AC1FA /* Product.swift */; };
@@ -64,6 +68,10 @@
 		3C071BA2C95B6355EC2823DE /* Pods-GBShop-GBShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopTests.release.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopTests/Pods-GBShop-GBShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CD7DCBC9EA56D64A37C6810 /* Pods-GBShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.debug.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.debug.xcconfig"; sourceTree = "<group>"; };
 		583CE556778AFEA4E0A83B82 /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D3949DD25B719DB009DA2D7 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		5D3949DE25B719DB009DA2D7 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		5D3949E025B719DB009DA2D7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D3949E125B719DB009DA2D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5D447BB125961113001AC1FA /* ResponseCodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		5D447BC5259619B3001AC1FA /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		5D447BCA25961ABC001AC1FA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -129,6 +137,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3949DC25B719DA009DA2D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D3949E025B719DB009DA2D7 /* LoginViewController.swift */,
+				5D3949E125B719DB009DA2D7 /* ProfileViewController.swift */,
+				5D3949DD25B719DB009DA2D7 /* ProductsListViewController.swift */,
+				5D3949DE25B719DB009DA2D7 /* ProductsTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5D7659B625906C1A00D3AE02 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +207,6 @@
 				5DA8F7F1258B40FF0014C00D /* Core */,
 				5DA8F7F2258B41090014C00D /* Resources */,
 				5DA8F7F3258B411F0014C00D /* Environments */,
-				5DA8F7BA258B39E70014C00D /* Main.storyboard */,
 			);
 			path = GBShop;
 			sourceTree = "<group>";
@@ -215,6 +233,7 @@
 		5DA8F7EC258B40440014C00D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5D3949DC25B719DA009DA2D7 /* Controllers */,
 				5DA8F7B4258B39E70014C00D /* AppDelegate.swift */,
 				5DA8F7B6258B39E70014C00D /* SceneDelegate.swift */,
 				5DA8F7ED258B40710014C00D /* BusinessLogic */,
@@ -279,6 +298,7 @@
 		5DA8F7F3258B411F0014C00D /* Environments */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8F7BA258B39E70014C00D /* Main.storyboard */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -527,6 +547,8 @@
 				5D93CCDC25A4623B000C893C /* UserReviews.swift in Sources */,
 				5DA8F7B5258B39E70014C00D /* AppDelegate.swift in Sources */,
 				5D93CCE125A46275000C893C /* ManageReviews.swift in Sources */,
+				5D3949E725B719DB009DA2D7 /* ProfileViewController.swift in Sources */,
+				5D3949E325B719DB009DA2D7 /* ProductsListViewController.swift in Sources */,
 				5D7659CC25906DBB00D3AE02 /* RequestRouter.swift in Sources */,
 				5D765A0B2590724E00D3AE02 /* Register.swift in Sources */,
 				5D447BCB25961ABC001AC1FA /* Product.swift in Sources */,
@@ -541,7 +563,9 @@
 				5D49A2CC25B1C3B400C415B0 /* Basket.swift in Sources */,
 				5D7659C225906D0800D3AE02 /* CustomDecodableSerializer.swift in Sources */,
 				5D447BC6259619B3001AC1FA /* Products.swift in Sources */,
+				5D3949E425B719DB009DA2D7 /* ProductsTableViewCell.swift in Sources */,
 				5D7659BD25906CB500D3AE02 /* ErrorParser.swift in Sources */,
+				5D3949E625B719DB009DA2D7 /* LoginViewController.swift in Sources */,
 				5D765A102590727700D3AE02 /* Logout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

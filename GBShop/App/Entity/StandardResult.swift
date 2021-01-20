@@ -51,3 +51,13 @@ struct UserBasketResult: Codable {
         case userMoney
     }
 }
+
+struct ProductsResult: Codable {
+    var pageNumber: Int
+    var products: [Product]
+
+    enum CodingKeys: String, CodingKey {
+        case pageNumber = "page_number"
+        case products
+    }
+}
