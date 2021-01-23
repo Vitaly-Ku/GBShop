@@ -36,13 +36,6 @@ struct UserBasketResult: Codable {
     var countGoods: Int
     var contents: [Product]
     var userMoney: Int?
-    
-    struct Product: Codable {
-        var id_product: Int
-        var product_name: String
-        var price: Int
-        var quantity: Int?
-    }
 
     enum CodingKeys: String, CodingKey {
         case amount

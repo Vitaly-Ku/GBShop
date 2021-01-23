@@ -12,10 +12,12 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
+        configureRegisterLabel()
     }
     
     @IBAction func loginButtonWasTapped(_ sender: UIButton) {
@@ -35,19 +37,38 @@ class LoginViewController: UIViewController {
         authorize(login: login, password: password)
     }
     
+    func configureRegisterLabel(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(registerTap))
+        registerLabel.isUserInteractionEnabled = true
+        registerLabel.addGestureRecognizer(tap)
+        let attributedString = NSMutableAttributedString(string: "Зарегистрироваться")
+        attributedString.addAttribute(.link, value: "Зарегистрироваться", range: NSRange(location: 0, length: 18))
+        registerLabel.attributedText = attributedString
+    }
+    
+    @objc
+    func registerTap(sender:UITapGestureRecognizer) {
+        showProfileViewController(isRegister: true)
+    }
     
     func configureTextFields(){
         loginTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
         passwordTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
     }
-
+    
+    func showProfileViewController(isRegister : Bool){
+        let tabBarViewController = TabBarController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.navigationController?.pushViewController(tabBarViewController, animated: true)
+    }
+    
     func authorize(login : String, password : String){
         let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: login, password: password) { response in
             switch response.result {
             case .success(_):
                 DispatchQueue.main.async {
-                    print("авторизация!")
+                    self.showProfileViewController(isRegister: false)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -56,40 +77,15 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func registrationButtonTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toRegistration", sender: self)
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        switch identifier {
-        case "toProduct":
-            let isAuth = checkUserData()
-            if !isAuth {
-                showAlert(title: "Ошибка", message: "Введены не верные данные пользователя")
-            }
-            return isAuth
-        default:
-            return true
-        }
-    }
-    
-    func checkUserData() -> Bool {
-        let login = loginTextField.text
-        let password = passwordTextField.text
-        return password == "123456" && login == "admin"
-    }
 }
-
-
 
 extension UITextField {
     func setBottomBorderOnlyWith(color: CGColor) {
         self.layer.masksToBounds = false
         self.layer.shadowColor = color
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        self.layer.shadowOpacity = 3.0
-        self.layer.shadowRadius = 3.0
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
     }
     
     func isError(baseColor: CGColor, numberOfShakes shakes: Float, revert: Bool) {

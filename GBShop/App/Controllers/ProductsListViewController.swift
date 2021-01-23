@@ -16,6 +16,7 @@ class ProductsListViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        registerCell(cellName: "ProductsTableViewCell")
         fillProductsList()
     }
     
@@ -33,6 +34,11 @@ class ProductsListViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         addProductToBasketByTap(product: self.products![indexPath.row])
+    }
+    
+    func registerCell(cellName : String){
+        let nib = UINib(nibName: cellName, bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: cellName)
     }
     
     func fillProductsList(){
@@ -53,18 +59,9 @@ class ProductsListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func addProductToBasketByTap(product : Product){
-        let basket = requestFactory.makeBasketRequestFactory()
-        basket.addToBasket(productId: product.id_product, quantity: 1) { response in
-            switch response.result {
-            case .success(_):
-                DispatchQueue.main.async {
-                    self.showAlert(title: "ОК!", message: "Товар добавлен в корзину")
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Ошибка!", message: error.errorDescription ?? "")
-                }
-            }
-        }
+        let productViewController = ProductViewController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        productViewController.product = product
+        appDelegate.navigationController?.pushViewController(productViewController, animated: true)
     }
 }

@@ -9,17 +9,17 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-//    let requestFactory = RequestFactory()
     var window: UIWindow?
-//
     var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-//        let rootViewController = LoginViewController(nibName: "LoginViewController", bundle : nil)
-        let rootViewController = LoginViewController()
+        let rootViewController = LoginViewController(nibName: "LoginViewController", bundle : nil)
         navigationController = UINavigationController(rootViewController: rootViewController)
+        
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
         
         
 //        let auth = requestFactory.makeAuthRequestFatory()
