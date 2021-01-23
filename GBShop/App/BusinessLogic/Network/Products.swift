@@ -11,7 +11,7 @@ class Products: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://gbshopapi.herokuapp.com")!
+    let baseUrl = URL(string: "https://hidden-citadel-40476.herokuapp.com")!
     
     init(
         errorParser: AbstractErrorParser,

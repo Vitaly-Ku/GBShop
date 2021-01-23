@@ -5,7 +5,6 @@
 //  Created by Vit K on 05.01.2021.
 //
 
-import Foundation
 import Alamofire
 
 class UserReviews: AbstractRequestFactory {
@@ -26,13 +25,12 @@ class UserReviews: AbstractRequestFactory {
 
 extension UserReviews: UserReviewsRequestFactory {
     func addReview(userId: Int, text: String, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
-        let requestModel = Review(baseUrl: baseUrl, path: Review.Pathes.addReview.rawValue, id: nil, productId: nil, userId: userId, text: text)
+        let requestModel = ReviewRequest(baseUrl: baseUrl, path: ReviewRequest.Pathes.addReview.rawValue, id: nil, productId: nil, userId: userId, text: text)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     func removeReview(reviewId: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
-        let requestModel = Review(baseUrl: baseUrl, path: Review.Pathes.removeReview.rawValue, id: reviewId, productId: nil, userId: nil, text: nil)
+        let requestModel = ReviewRequest(baseUrl: baseUrl, path: ReviewRequest.Pathes.removeReview.rawValue, id: reviewId, productId: nil, userId: nil, text: nil)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
-
