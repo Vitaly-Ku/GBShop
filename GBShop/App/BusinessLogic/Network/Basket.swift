@@ -12,7 +12,7 @@ class Basket: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://hidden-citadel-40476.herokuapp.com")!
+    let baseUrl = URL(string: "https://hidden-citadel-40476.herokuapp.com/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -39,6 +39,11 @@ extension Basket: BasketRequestFactory {
         let requestModel = Product(baseUrl: baseUrl, path: Product.Pathes.payBasket.rawValue, userId : userId, productId: nil, quantity: nil)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
+    func getBasket(userId: Int, completionHandler: @escaping (AFDataResponse<UserBasketResult>) -> Void) {
+        let requestModel = Product(baseUrl: baseUrl, path: Product.Pathes.getBasket.rawValue, userId : userId, productId: nil, quantity: nil)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
 }
 
 extension Basket {
@@ -62,6 +67,7 @@ extension Basket {
             case addToBasket
             case deleteFromBasket
             case payBasket
+            case getBasket
         }
     }
 }
