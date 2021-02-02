@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import Firebase
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController {
     let requestFactory = RequestFactory()
@@ -16,6 +19,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerOpenViewController(title: "LoginViewController")
         configureTextFields()
         configureRegisterLabel()
     }
@@ -34,6 +38,7 @@ class LoginViewController: UIViewController {
             passwordTextField.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 5, revert: true)
             return
         }
+        registerButtonTapped(title: "loginButton")
         authorize(login: login, password: password)
     }
     
@@ -68,7 +73,7 @@ class LoginViewController: UIViewController {
             switch response.result {
             case .success(_):
                 DispatchQueue.main.async {
-                    self.showProfileViewController(isRegister: false)
+//                    fatalError("test")
                 }
             case .failure(let error):
                 DispatchQueue.main.async {

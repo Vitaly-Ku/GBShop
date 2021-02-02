@@ -13,6 +13,9 @@ class ProductsListViewController: UIViewController, UITableViewDelegate, UITable
     var products : [Product]?
     
     override func viewDidLoad() {
+        
+        registerOpenViewController(title: "ProductsListViewController")
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self

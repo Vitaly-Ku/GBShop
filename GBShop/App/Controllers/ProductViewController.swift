@@ -38,8 +38,9 @@ class ProductViewController: UIViewController {
         basket.addToBasket(productId: product!.id_product, quantity: 1) { response in
             switch response.result {
             case .success(_):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.showAlert(title: "ОК!", message: "Товар добавлен в корзину")
+                    registerAddingProductToBusket(title: product!)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {

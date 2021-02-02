@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+ //   let requestFactory = RequestFactory()
     var window: UIWindow?
+    
     var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -20,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        
+        FirebaseApp.configure()
         
 //        let auth = requestFactory.makeAuthRequestFatory()
 //        auth.login(userName: "123", password: "mypassword") { response in
