@@ -21,6 +21,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerOpenViewController(title: "ProfileViewController")
+        
         if (isRegisterWindow){
             configureUI(labelText: "Регистрация", buttonText: "Зарегистрироваться", isRegisterWindow: true)
         } else {

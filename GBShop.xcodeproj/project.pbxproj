@@ -48,6 +48,8 @@
 		5DA8F7CC258B39E80014C00D /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8F7CB258B39E80014C00D /* GBShopTests.swift */; };
 		5DA8F7D7258B39E80014C00D /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8F7D6258B39E80014C00D /* GBShopUITests.swift */; };
 		5DA8F7E8258B3A0A0014C00D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8F7E7258B3A0A0014C00D /* .gitignore */; };
+		5DD8432025C99DA400A9C964 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD8431F25C99DA400A9C964 /* Utils.swift */; };
+		5DD8432525C9A09300A9C964 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DD8432425C9A09300A9C964 /* GoogleService-Info.plist */; };
 		7CB50D2AA87F246EBBA9086F /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC798BB3A443D4040FD6E6C /* Pods_GBShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		5DA8F7D6258B39E80014C00D /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		5DA8F7D8258B39E80014C00D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA8F7E7258B3A0A0014C00D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5DD8431F25C99DA400A9C964 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5DD8432425C9A09300A9C964 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75FD9AF88FB8E7FA6AA3849F /* Pods-GBShop-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopTests/Pods-GBShop-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC798BB3A443D4040FD6E6C /* Pods_GBShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,6 +236,7 @@
 		5DA8F7B3258B39E70014C00D /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
+				5DD8432425C9A09300A9C964 /* GoogleService-Info.plist */,
 				5DA8F7EC258B40440014C00D /* App */,
 				5DA8F7F1258B40FF0014C00D /* Core */,
 				5DA8F7F2258B41090014C00D /* Resources */,
@@ -270,6 +275,7 @@
 				5DA8F7EE258B40860014C00D /* Entity */,
 				5DA8F7F0258B40D90014C00D /* Assembly */,
 				5DA8F7EF258B40950014C00D /* Flows */,
+				5DD8431F25C99DA400A9C964 /* Utils.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				5D4626BD25B9B7B000072259 /* ProductsTableViewCell.xib in Resources */,
 				5DA8F7BE258B39E80014C00D /* Assets.xcassets in Resources */,
 				5D4626C125B9B7B000072259 /* ProductsListViewController.xib in Resources */,
+				5DD8432525C9A09300A9C964 /* GoogleService-Info.plist in Resources */,
 				5D4626BF25B9B7B000072259 /* LoginViewController.xib in Resources */,
 				5D4626C225B9B7B000072259 /* ReviewsTableViewController.xib in Resources */,
 			);
@@ -579,6 +586,7 @@
 				5D31D4A925C40D42000FCD2F /* BasketViewController.swift in Sources */,
 				5D4626D725B9B7FC00072259 /* LoginViewController.swift in Sources */,
 				5D765A06259071C700D3AE02 /* RequestFactory.swift in Sources */,
+				5DD8432025C99DA400A9C964 /* Utils.swift in Sources */,
 				5D7659B825906C4400D3AE02 /* AbstractErrorParser.swift in Sources */,
 				5D4626D925B9B7FC00072259 /* TabBarController.swift in Sources */,
 				5D93CCE625A462AD000C893C /* Review.swift in Sources */,
@@ -773,6 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Q5PBRQ5CWD;
 				INFOPLIST_FILE = GBShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -783,6 +792,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -793,6 +803,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Q5PBRQ5CWD;
 				INFOPLIST_FILE = GBShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -803,6 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
